@@ -1,4 +1,5 @@
 build
+.thumb.png
 *.pyc
 configure.py
 .DS_Store
