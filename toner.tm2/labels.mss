@@ -125,7 +125,7 @@ here helps define exactly which features come in at which zoom levels. */
 	text-dy: 1;
 }
 
-#city-labels-z4[zoom=4], 
+#city-labels-z4[zoom=4],
 #city-labels-z5[zoom=5],
 #city-labels-z6[zoom=6] {
 	text-name: '[name]';
@@ -142,7 +142,7 @@ here helps define exactly which features come in at which zoom levels. */
 	text-face-name: 'Arial Unicode MS Bold';
 	text-fill: #000;
 	text-halo-radius: 2;
-	text-halo-fill: @land;    
+	text-halo-fill: @land;
 }
 
 #city-labels-z8[zoom=8],
@@ -155,7 +155,7 @@ here helps define exactly which features come in at which zoom levels. */
 	text-face-name: 'Arial Unicode MS Bold';
 	text-fill: #000;
 	text-halo-radius: 2;
-	text-halo-fill: @land;    
+	text-halo-fill: @land;
 }
 
 #city-points-z9[zoom=9],
@@ -170,7 +170,7 @@ here helps define exactly which features come in at which zoom levels. */
 	text-name: '[name]';
 	text-size: 10;
 }
-#city-labels-z4[zoom=4][font_size=14] { 
+#city-labels-z4[zoom=4][font_size=14] {
 	text-name: '[name]';
 	text-size: 14;
 }
@@ -268,7 +268,6 @@ here helps define exactly which features come in at which zoom levels. */
 	text-spacing: 100;
 	text-line-spacing: -5;
 	text-wrap-width: 70;
-	
 	[zoom>=9][zoom<12] {
 		text-name: '[name]';
 		text-spacing: 200;
@@ -343,7 +342,6 @@ here helps define exactly which features come in at which zoom levels. */
 	text-halo-fill: @major_case;
 	text-spacing: 100;
 	text-placement: line;
-	
 	text-dy: 8;
 	text-size: 13;
 }
@@ -509,10 +507,10 @@ here helps define exactly which features come in at which zoom levels. */
 }
 
 /* Subway stations and icons */
-#poi-stations[zoom>=18][railway='station'] { 
+#rail-station-labels[zoom>=18] {
 	/* this doesn't have a data source right now */
 	text-name: '[name]';
-	text-face-name: 'Arial Bold';
+	text-face-name: 'Source Sans Pro Bold';
 	text-size: 12;
 	text-placement: point;
 	text-max-char-angle-delta: 30;
@@ -525,26 +523,26 @@ here helps define exactly which features come in at which zoom levels. */
 	text-dx: 0;
 	text-dy: 8;
 }
-#poi-station-labels[zoom=17][railway='station'] { 
-	point-file: url('icons/subway_sm.png'); 
+#rail-station-labels[zoom=17] {
+	point-file: url('icons/subway_sm.png');
 }
-#poi-station-labels[zoom>=18][railway='station'] { 
-	point-file: url('icons/subway.png'); 
+#rail-station-labels[zoom>=18] {
+	point-file: url('icons/subway.png');
 }
 
-/* airports */
-#airports[zoom=10][natlScale>.57],
-#airports[zoom=11][natlScale>.29],
-#airports[zoom=12][natlScale>.29],
-#airports[zoom=13][natlScale>.29] {
+/* airport_label */
+#airport_label[zoom=10],
+#airport_label[zoom=11],
+#airport_label[zoom=12],
+#airport_label[zoom=13] {
 	point-file: url('icons/airplane-19-reverse.png');
 }
-#airports[zoom=13][natlScale>.29],
-#airports[zoom=14][natlScale>.29],
-#airports[zoom=15][natlScale>.29],
-#airports[zoom>=16][natlScale>.29] {
-	text-name: '[label_lng]';
-	text-face-name: 'Arial Unicode MS Italic';
+#airport_label[zoom=13],
+#airport_label[zoom=14],
+#airport_label[zoom=15],
+#airport_label[zoom>=16] {
+	text-name: '[name]';
+	text-face-name: 'Source Sans Pro Italic';
 	text-fill: #000;
 	text-size: 14;
 	text-halo-fill: @land;
@@ -553,9 +551,9 @@ here helps define exactly which features come in at which zoom levels. */
 	text-dy: 14;
 	text-allow-overlap: true;
 }
-#airports[zoom=14][natlScale>.29],
-#airports[zoom=15][natlScale>.29],
-#airports[zoom>=16][natlScale>.29] {
-	text-name: '[label_lng]';
+#airport_label[zoom=14],
+#airport_label[zoom=15],
+#airport_label[zoom>=16] {
+	text-name: '[name]';
 	text-dy: 0;
 }
