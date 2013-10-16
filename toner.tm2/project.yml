@@ -8,15 +8,15 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -117.44934082031249
-  - 32.59310597426537
-  - 8
+  - -73.92614364624023
+  - 40.72358364851729
+  - 12
 description: Port of Toner to TileMill2, building on Aaron Lidman's Toner-for-TileMill work
 format: "png8:m=h"
 interactivity_layer: ''
 maxzoom: 22
 minzoom: 0
-mtime: 1380431029885
+mtime: 1381623071400
 name: Toner TM2
 scale: 1
 source: "mapbox:///mapbox.mapbox-streets-v3"
@@ -25,4 +25,5 @@ styles:
   - roads.mss
   - boundaries.mss
   - palette.mss
+  - labels.mss
 template: ''
