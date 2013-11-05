@@ -1,6 +1,8 @@
 Toner for Tilemill
 ==================
 
+NOTE: @almccon's attempt to port Toner to TileMill2 has been moved to stamen/mapnik-toner.tm2. There will be nothing further of interest posted to this repo.
+
 ![Toner for Tilemill screenshot](https://raw.github.com/aaronlidman/Toner-for-Tilemill/master/preview.png)
 
 Toner for Tilemill is a port of [Stamen's](http://stamen.com/) high contrast, black-and-white mapping style, [Toner](https://github.com/Citytracking/toner), for use with [Tilemill](http://mapbox.com/tilemill). The style is ment to reflect the current state of Toner's appearance in the easy to use Tilemill environment. [Check out a map of the output.](http://jsfiddle.net/E5khK/7/embedded/result/)
