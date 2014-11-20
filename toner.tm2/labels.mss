@@ -1,11 +1,12 @@
 /* these labels aren't nested as well as they could be because of errors in
 tilemill involving text-name and text-face-name */
-@name: '[name_en]';
+//@name: '[name_en]';
+@name: '[name]';
 
 /* The labels are for world zooms, mid-zooms, and detailed city zooms. */
 Map { font-directory: url(./fonts); }
 
-/* Continent labels are just points. */
+/* Continent labels are missing from the mapbox vectors */
 #continent-labels[zoom>=1][zoom<3] {
 	text-name: '[name]';
 	text-face-name: 'Arial Unicode MS Bold';
@@ -19,8 +20,7 @@ Map { font-directory: url(./fonts); }
 
 /* Ocean, Sea, Bay and other marine labels. Some use of scalerank column
 here helps define exactly which features come in at which zoom levels. */
-#marine_label[zoom=2][labelrank=0],
-#marine_label[zoom=3],
+#marine_label[zoom=3][labelrank=0],
 #marine_label[zoom=4][labelrank<4],
 #marine_label[zoom=5][labelrank<6],
 #marine_label[zoom>=6] {
@@ -33,9 +33,16 @@ here helps define exactly which features come in at which zoom levels. */
 	text-halo-fill: @water;
 	text-line-spacing: -7;
 }
-#marine-labels-10m[zoom=5][ScaleRank<6],
-#marine-labels-10m[zoom>=6] {
+#water_label[zoom=8],
+#water_label[zoom>=9] {
+	text-name: @name;
 	text-face-name: 'Arial Unicode MS Italic';
+    text-wrap-width: 80;
+	text-size: 14;
+	text-fill: #fff;
+	text-halo-radius: 1;
+	text-halo-fill: @water;
+	text-line-spacing: -7;
 }
 
 /* Country labels */
